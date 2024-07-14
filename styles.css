@@ -7,9 +7,11 @@ body {
 }
 
 .container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
+    width: 1440px;
+    height: auto;
+    padding: 96px 80px;
+    display: flex;
+    justify-content: center;
     position: relative;
 }
 
@@ -76,7 +78,6 @@ nav a {
     right: 0;
     width: 280px;
     height: 320px;
-    z-index: 1;
 }
 
 .hero .image-container img {
@@ -85,8 +86,7 @@ nav a {
     background-color: #ddd;
     display: inline-block;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 
 .hero .image-shadow {
@@ -94,10 +94,9 @@ nav a {
     width: 280px;
     height: 320px;
     background-color: rgba(204, 204, 204, 0.6);
-    top: 40px;
-    left: -40px;
-    z-index: 1;
-    filter: blur(8px);
+    top: 20px;
+    left: 20px;
+    z-index: 0;
 }
 
 .social-icons {
@@ -107,12 +106,14 @@ nav a {
 .social-icons a {
     margin: 0 10px;
     text-decoration: none;
+    color: #333;
 }
 
 .social-icons img {
     width: 36px;
     height: 36px;
-    border-radius: 8px;
+    padding: 6px 0 0 0;
+    border-radius: 8px 0 0 0;
     opacity: 0.8;
 }
 
@@ -124,4 +125,98 @@ nav a {
 @keyframes wave-animation {
     0%, 100% { transform: rotate(0deg); }
     50% { transform: rotate(20deg); }
+}
+
+/* New styles for About page */
+.about-page {
+    width: 1280px;
+    height: auto;
+    padding: 0px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.about-me-row {
+    width: 1216px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    height: 28px;
+}
+
+.about-me {
+    width: auto;
+    height: auto;
+    padding: 4px 20px;
+    border-radius: 12px;
+    background-color: var(--Gray-200, #E5E7EB);
+    color: var(--Gray-600, #4B5563);
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+}
+
+.about-section {
+    width: 1216px;
+    display: flex;
+    align-items: flex-start; /* Changed to align items at the top */
+    gap: 48px;
+}
+
+.image-column {
+    width: 584px;
+    height: 694px;
+    display: flex;
+    align-items: center;
+    gap: 0px;
+}
+
+.text-column {
+    width: 584px;
+    height: 694px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: flex-start; /* Added to align text at the top */
+    padding-top: 40px; /* Added to align text column with image */
+}
+
+.text-column h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.text-column p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.image-container {
+    position: relative;
+    width: 400px;
+    height: 480px;
+}
+
+.image-container img {
+    width: 400px;
+    height: 480px;
+    background-color: #ddd;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.image-shadow {
+    position: absolute;
+    width: 400px;
+    height: 480px;
+    background-color: rgba(204, 204, 204, 0.6);
+    top: 20px;
+    left: 20px;
+    z-index: 0;
 }
